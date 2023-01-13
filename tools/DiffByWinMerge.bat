@@ -5,6 +5,8 @@ REM %3 : ファイル
 
 chcp 65001
 
+git stash push %3
+
 git checkout %2 %3
 
 set p1=%1\%3
@@ -24,5 +26,7 @@ git checkout HEAD %3
 
 del %1\before.txt
 del %1\after.txt
+
+git stash apply stash@{0}
 
 exit
