@@ -1,6 +1,6 @@
 # DiffByWinMerge
 
-DiffByWinMerge は 直近の変更との Diff を取り、WinMerge で表示する SourceTree 用のカスタム操作バッチファイルです。
+DiffByWinMerge は対象のファイルについて、直近の変更との Diff を取り、WinMerge で表示する SourceTree 用のカスタム操作バッチファイルです。
 
 ## インストール方法
 
