@@ -1,13 +1,18 @@
 
-REM %1 : リポジトリのパス
-REM %2 : 指定したsha
-REM %3 : ファイル
+REM
+REM			DiffByWinMerge.bat
+REM			created by @dhq_boiler
+REM
+REM 		%1 : path to the repository
+REM 		%2 : specified hash
+REM 		%3 : target file
+REM
 
 chcp 65001
 
 if %2==-1 (
 
-msg %username% /W 未コミットのdiffは確認できません。
+PowerShell -command "Add-Type -AssemblyName System.Windows.Forms;$result = [System.Windows.Forms.MessageBox]::Show(\"Please see SourceTree for uncommitted diffs.\", 'DiffByWinMerge', 'OK', 'Warning');exit $result;"
 
 exit
 
