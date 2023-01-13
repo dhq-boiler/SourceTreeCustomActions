@@ -20,9 +20,9 @@ set p1=%1\%3
 more %p1:/=\% > %1\after.txt
 
 setlocal
-for /f "usebackq delims=" %%A in (` git rev-list -1 %2^^ -- %3 `) do set HOGE=%%A
+for /f "usebackq delims=" %%A in (` git rev-list -1 %2^^ -- %3 `) do set HASH=%%A
 
-git checkout %HOGE%^^ %3
+git checkout %HASH%^^ %3
 
 more %p1:/=\% > %1\before.txt
 
