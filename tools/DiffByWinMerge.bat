@@ -5,6 +5,13 @@ REM %3 : ファイル
 
 chcp 65001
 
+if %2==-1 (
+
+msg %username% /W 未コミットのdiffは確認できません。
+
+exit
+
+) 
 
 git checkout %2 %3
 
